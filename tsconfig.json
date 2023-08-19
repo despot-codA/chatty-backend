@@ -18,6 +18,16 @@
     "forceConsistentCasingInFileNames": true,
     "allowSyntheticDefaultImports": true,
     "pretty": true,
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "plugins": [
+      { "trasform": "typescrpt-transform-paths"},
+      { "transform": "typescrpt-transform-paths", "afterDeclarations": true }
+    ],
+    "paths": {
+      "@global/*": ["src/shared/globals/*"],
+      "@service/*": ["src/shared/services/*"],
+      "@socket/*": ["src/shared/sockets/*"],
+      "@root/*": ["src/*"]
+    }
   }
 }
